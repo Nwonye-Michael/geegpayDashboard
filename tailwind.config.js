@@ -2,7 +2,12 @@
 module.exports = {
   content: ["./src/**/*.{html,js}"],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        PlusJakartaSans: ["Plus Jakarta Sans"],
+        Inter: ["Inter"],
+      },
+    },
   },
   plugins: [],
 }

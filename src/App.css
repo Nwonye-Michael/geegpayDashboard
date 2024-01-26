@@ -5,3 +5,16 @@
 .iconHover :hover {
   stroke: #000;
 }
+
+.scrollBarWidthZero {
+  scrollbar-width: none;
+}
+
+.scrollBarWidthZero::-webkit-scrollbar {
+  width: 0; /* Set the width to 0 to hide the scrollbar */
+}
+
+/* Optional: If you want to hide the scrollbar thumb in Webkit browsers */
+.scrollBarWidthZero::-webkit-scrollbar-thumb {
+  background-color: transparent;
+}

@@ -5,8 +5,7 @@ const Layout = ({ children }) => {
   return (
     <div className="w-full h-full flex ">
       <Header />
-
-      {children}
+      <div className="w-[calc(100vw-80px)]">{children}</div>
     </div>
   )
 }

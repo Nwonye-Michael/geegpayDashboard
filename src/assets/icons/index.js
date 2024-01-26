@@ -40,3 +40,48 @@ export const DarkIcon = ({ fill, className }) => {
     </svg>
   )
 }
+
+export const BellIcon = ({ fill, className }) => (
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    width={20}
+    height={20}
+    fill="none"
+    focusable="true"
+  >
+    <path
+      fill="#0D062D"
+      fillRule="evenodd"
+      d="M10 1.042A6.458 6.458 0 0 0 3.542 7.5v.587c0 .58-.172 1.148-.494 1.631l-.956 1.436a2.934 2.934 0 0 0 1.669 4.459c.629.171 1.264.316 1.903.435l.002.005c.64 1.71 2.352 2.905 4.334 2.905 1.982 0 3.694-1.195 4.335-2.905l.002-.005c.64-.119 1.275-.264 1.903-.435a2.933 2.933 0 0 0 1.67-4.459l-.957-1.436a2.941 2.941 0 0 1-.495-1.631V7.5A6.458 6.458 0 0 0 10 1.042Zm2.813 15.239a23.72 23.72 0 0 1-5.627 0c.592.85 1.623 1.427 2.814 1.427 1.19 0 2.22-.576 2.813-1.427ZM4.792 7.5a5.208 5.208 0 1 1 10.416 0v.587c0 .827.245 1.636.705 2.325l.956 1.435a1.682 1.682 0 0 1-.958 2.56 22.466 22.466 0 0 1-11.823 0 1.684 1.684 0 0 1-.958-2.559l.958-1.436a4.192 4.192 0 0 0 .704-2.325V7.5Z"
+      clipRule="evenodd"
+    />
+  </svg>
+)
+
+export const PriceTag = ({ item, children }) => (
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    width={80}
+    height={32}
+    fill="none"
+    focusable="true"
+  >
+    <path
+      fill="#000"
+      fillRule="evenodd"
+      d="M0 5a5 5 0 0 1 5-5h70a5 5 0 0 1 5 5v16a5 5 0 0 1-5 5H46l-6 5.977L34 26H5a5 5 0 0 1-5-5V5Z"
+      clipRule="evenodd"
+      className="relative z-0"
+    />
+    <text
+      x="50%"
+      y="50%"
+      dominantBaseline="middle"
+      textAnchor="middle"
+      fill="white"
+      fontSize="12"
+    >
+      ${item}
+    </text>
+  </svg>
+)

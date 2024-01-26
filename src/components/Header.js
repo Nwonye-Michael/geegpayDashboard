@@ -22,7 +22,7 @@ const Header = () => {
   const [lightMode, setLightMode] = useState(true)
 
   return (
-    <header className="xl:w-[80px] xl:min-h-[100vh] border w-full h-[80px] p-5 flex flex-col justify-between bg-gray-50 ">
+    <header className="w-[80px] min-h-[100vh] border p-5 flex flex-col justify-between bg-gray-50  sticky">
       <div className="flex flex-col gap-5 items-center">
         <img alt="" src={logo} className="h-10 w-10 object-contain" />
         <Category
