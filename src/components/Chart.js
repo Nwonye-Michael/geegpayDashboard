@@ -1,10 +1,9 @@
 import { ArrowDown2 } from "iconsax-react"
 import React from "react"
 
-import priceTag from "../assets/icons/priceTag.svg"
 import { PriceTag } from "../assets/icons"
 const Data = [
-  7500, 18000, 4500, 28000, 9000, 45000, 9800, 19000, 32000, 1000, 12000, 0,
+  7500, 18000, 4500, 28000, 9000, 45000, 9800, 19000, 32000, 1000, 12000, 20,
 ]
 const monthsShort = [
   "Jan",
@@ -84,9 +83,9 @@ const Chart = () => {
                 const height = (size * 100) / 6
 
                 const heightString = height + "%"
-                console.log("height string =", heightString)
+                // console.log("height string =", heightString)
 
-                console.log(size)
+                // console.log(size)
                 return (
                   <div className="flex h-full  relative ">
                     <div
@@ -107,7 +106,7 @@ const Chart = () => {
                 size = reminder / 10000 + 1
                 const height = (size * 100) / 6
                 const heightString = height + "%"
-                console.log(size)
+                // console.log(size)
                 return (
                   <div className="flex h-full  relative ">
                     <div

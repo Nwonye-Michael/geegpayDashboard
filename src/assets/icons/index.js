@@ -86,3 +86,19 @@ export const PriceTag = ({ item, children }) => (
     </text>
   </svg>
 )
+
+export const SideBarIndicator = () => (
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    width={3}
+    height={21}
+    fill="none"
+    focusable="true"
+    // {...props}
+  >
+    <path
+      fill="#0D062D"
+      d="M0 3.025A2.658 2.658 0 0 1 3 .39V21a3 3 0 0 1-3-3V3.025Z"
+    />
+  </svg>
+)

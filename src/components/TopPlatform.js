@@ -2,7 +2,7 @@ import React from "react"
 import { formatCurrencyWithZeros } from "./LastOrder"
 
 const Platform = ({ title, color, amount, prevAmount }) => {
-  console.log(color)
+  // console.log(color)
   const percentage = ((amount - prevAmount) / prevAmount) * 100
   return (
     <div className="flex flex-col gap-y-3 xl:gap-y-6 w-full h-fit font-PlusJakartaSans text-left">
@@ -22,6 +22,13 @@ const Platform = ({ title, color, amount, prevAmount }) => {
       </div>
     </div>
   )
+}
+
+export const seeAllFunction = (className) => {
+  const container = document.querySelector(`.${className}`)
+  if (!container.classList.contains("!max-h-none")) {
+    container.classList.add("!max-h-none")
+  } else container.classList.remove("!max-h-none")
 }
 
 const TopPlatform = () => {
@@ -83,12 +90,17 @@ const TopPlatform = () => {
   ]
 
   return (
-    <div className="w-full h-fit max-h-[250px] md:max-h-[386px] 2xl:max-h-[289px] 3xl:max-h-[422px] pt-5 px-3 xl:px-5 flex flex-col bg-white rounded-[14px] border border-slate-100 ">
+    <div className="w-full h-fit max-h-[250px] md:max-h-[386px] 2xl:max-h-[289px] 3xl:max-h-[422px] pt-5 px-3 xl:px-5 flex flex-col bg-white rounded-[14px] border border-slate-100 fullLenghtOnSeeAll1 ">
       <div className="w-full h-[26px] justify-between items-center flex mb-[14px] ">
         <div className="text-zinc-800 text-base xl:text-lg font-semibold  leading-relaxed">
           Top Platforms
         </div>
-        <div className="text-center text-emerald-400 text-xs xl:text-lg font-medium  leading-relaxed cursor-pointer">
+        <div
+          className="text-center text-emerald-400 text-xs xl:text-lg font-medium  leading-relaxed cursor-pointer"
+          onClick={() => {
+            // seeAllFunction("fullLenghtOnSeeAll1")
+          }}
+        >
           See All
         </div>
       </div>

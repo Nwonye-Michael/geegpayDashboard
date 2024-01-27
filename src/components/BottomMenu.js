@@ -1,6 +1,5 @@
 import React from "react"
 import { useState } from "react"
-import logo from "../assets/icons/logo.svg"
 
 import {
   // ArrowCircleRight2,

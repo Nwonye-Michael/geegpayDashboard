@@ -3,8 +3,6 @@ import {
   Coin,
   I3DRotate,
   ShoppingCart,
-  TrendDown,
-  TrendUp,
 } from "iconsax-react"
 import React, { useState, useEffect } from "react"
 import buyChart from "../assets/icons/buyChart.svg"

@@ -3,8 +3,6 @@ import avartarOne from "../assets/images/avartarOne.png"
 import avartarTwo from "../assets/images/avartarTwo.svg"
 import avartarThree from "../assets/images/avartarThree.svg"
 import avartarFour from "../assets/images/avartarFour.svg"
-import avartarFive from "../assets/images/avartar.svg"
-// import "../App.css"
 
 import React from "react"
 
