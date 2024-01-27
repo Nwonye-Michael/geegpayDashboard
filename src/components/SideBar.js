@@ -1,8 +1,7 @@
 import React from "react"
 import { useState } from "react"
 import logo from "../assets/icons/logo.svg"
-import bright from "../assets/icons/brightness.svg"
-import dark from "../assets/icons/moon.svg"
+
 
 import {
   ArrowCircleRight2,
@@ -17,12 +16,12 @@ import {
 } from "iconsax-react"
 import { BrightnessIcon, DarkIcon } from "../assets/icons"
 
-const Header = () => {
+const SideBar = () => {
   const [activeNav, setActiveNav] = useState("dashboard")
   const [lightMode, setLightMode] = useState(true)
 
   return (
-    <header className="w-[80px] min-h-[100vh] border p-5 flex flex-col justify-between bg-gray-50  sticky">
+    <header className="w-[80px] min-h-[100vh] border p-5 md:flex flex-col justify-between bg-gray-50  sticky hidden">
       <div className="flex flex-col gap-5 items-center">
         <img alt="" src={logo} className="h-10 w-10 object-contain" />
         <Category
@@ -125,4 +124,4 @@ const Header = () => {
   )
 }
 
-export default Header
+export default SideBar

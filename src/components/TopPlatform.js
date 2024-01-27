@@ -83,7 +83,7 @@ const TopPlatform = () => {
   ]
 
   return (
-    <div className="w-full h-fit md:max-h-[386px] 2xl:max-h-[289px] 3xl:max-h-[422px] pt-5 px-3 xl:px-5 flex flex-col bg-white rounded-[14px] border border-slate-100 ">
+    <div className="w-full h-fit max-h-[250px] md:max-h-[386px] 2xl:max-h-[289px] 3xl:max-h-[422px] pt-5 px-3 xl:px-5 flex flex-col bg-white rounded-[14px] border border-slate-100 ">
       <div className="w-full h-[26px] justify-between items-center flex mb-[14px] ">
         <div className="text-zinc-800 text-base xl:text-lg font-semibold  leading-relaxed">
           Top Platforms

@@ -79,15 +79,15 @@ const InfoBox = ({ title, amount, prevAmount }) => {
   }, [amount, prevAmount, title])
 
   return (
-    <div className="w-full h-full border border-slate-100 bg-white xl:flex flex-col xl:gap-[10px] grid grid-cols-1 p-4 rounded-[14px]">
+    <div className="w-full h-full border border-slate-100 bg-white xl:flex flex-col xl:gap-[10px] grid grid-cols-1 gap-4 md:gap-[auto] p-4 rounded-[14px]">
       <div className="flex justify-between items-center">
-        <div className="border rounded-[50%] border-[#E6E6E6] p-1 xl:p-2  ">
+        <div className="border rounded-[50%] border-[#E6E6E6] p-[2px] md:p-1 xl:p-2  ">
           {icon}
         </div>{" "}
         <img
           src={chart}
           alt=""
-          className=" w-[50px] md:w-[80px] xl:w-[106px] aspect-[106/32]"
+          className=" w-[80px] xl:w-[106px] aspect-[106/32]"
         />
       </div>
       <div className="flex flex-col gap-[5px] font-PlusJakartaSans">
@@ -100,7 +100,7 @@ const InfoBox = ({ title, amount, prevAmount }) => {
       </div>
       <div className="flex justify-between">
         <div
-          className={`w-[70px] flex h-4 xl:h-6 px-2 py-1  bg-opacity-10 rounded-full justify-center items-center gap-1 text-xs font-medium font-PlusJakartaSans leading-none}   ${
+          className={` w-[60px] md:w-[70px] flex h-4 xl:h-6 px-2 py-1  bg-opacity-10 rounded-full justify-center items-center gap-1 text-[10px] md:text-xs font-medium font-PlusJakartaSans leading-none}   ${
             profit
               ? "bg-emerald-400 text-emerald-400"
               : "bg-red-500 text-red-500 "

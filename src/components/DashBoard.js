@@ -39,16 +39,16 @@ const DashBoard = () => {
       </div>
 
       {/* tab and phone */}
-      <div className="xl:hidden flex flex-col bg-neutral-50 w-[98%] border border-red-500  mx-auto ">
-        <section className="w-full flex gap-2 md:gap-3 xl:gap-5 pt-5">
+      <div className="xl:hidden flex flex-col bg-neutral-50 w-[90%] md:w-[98%]   mx-auto ">
+        <section className="w-full flex md:flex-row flex-col gap-2 md:gap-3 xl:gap-5 pt-5">
           {" "}
-          <div className="w-[55%]    grid grid-cols-2 xl:gap-4 gap-2  md:h-400px xl:h-fit">
+          <div className="md:w-[55%]  w-full  grid grid-cols-2 xl:gap-4 gap-2  md:h-400px xl:h-fit">
             <InfoBox title="Total Refund" amount={1} prevAmount={0} />
             <InfoBox title="Total Refund" amount={1} prevAmount={0} />
             <InfoBox title="Total Refund" amount={1} prevAmount={4} />
             <InfoBox title="Total Income" amount={1} prevAmount={0} />
           </div>
-          <div className="flex gap-4 w-[45%] h-full ">
+          <div className="flex gap-4 md:w-[45%] w-full h-full ">
             <TopPlatform />
           </div>
         </section>

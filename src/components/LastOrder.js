@@ -20,29 +20,29 @@ export function formatCurrencyWithZeros(number) {
 
 const Order = ({ name, photo, date, amount, status }) => {
   return (
-    <div className="w-full h-[60] justify-between items-start flex gap-[auto] font-PlusJakartaSans border-t border-slate-100 xl:text-base text-sm  font-normal  leading-normal text-left pt-4">
-      <div className="w-[216px] flex gap-2.5 justify-left items-center text-gray-700 font-medium">
-        <div className="w-8 h-8 relative rounded-[50%] overflow-hidden">
+    <div className="w-full h-8 md:h-[60px] justify-between items-start flex gap-[auto] font-PlusJakartaSans border-t border-slate-100 xl:text-base md:text-sm text-[10px]  font-normal  leading-normal text-left pt-4">
+      <div className="w-[216px] flex md:gap-2.5 gap-1.5 justify-left items-center text-gray-700 font-medium h-full ">
+        <div className="md:w-8 w-6 md:h-8 h-6 relative rounded-[50%] overflow-hidden">
           <img className="h-full w-full " src={photo} alt="" />
         </div>{" "}
         {name}
       </div>
 
-      <div className="w-[116px] flex justify-left items-center text-neutral-500">
+      <div className="w-[116px] justify-left h-full items-center text-neutral-500 md:flex hidden">
         {date}
       </div>
-      <div className="w-[120px] flex justify-left items-center text-slate-900  font-medium ">
+      <div className="w-[120px] flex justify-left h-full items-center text-slate-900  font-medium ">
         {formatCurrencyWithZeros(amount)}
       </div>
 
       <div
-        className={`w-[95px] flex justify-left items-center  ${
+        className={`w-[95px] flex justify-left h-full items-center  ${
           status === "Paid" ? "text-emerald-400" : "text-red-500"
         }`}
       >
         {status}{" "}
       </div>
-      <div className="w-20 flex justify-left items-center gap-1.5 text-slate-900 text-sm  ">
+      <div className="w-20 justify-left h-full items-center gap-1.5 text-slate-900 text-sm md:flex hidden ">
         <DocumentDownload color="#292D32" size={16} />{" "}
         <span className="xl:block hidden">View</span>
       </div>
@@ -117,7 +117,7 @@ const LastOrder = () => {
     },
   ]
   return (
-    <div className="w-full  h-fit md:max-h-[386px] 2xl:max-h-[calc(289px)] 3xl:max-h-[422px] py-5  px-5 flex flex-col bg-white rounded-[14px] border border-slate-100 relative">
+    <div className="w-full  h-fit max-h-[250px] md:max-h-[386px] 2xl:max-h-[calc(289px)] 3xl:max-h-[422px] md:py-5  md:px-5 flex flex-col bg-white rounded-[14px] border border-slate-100 relative">
       <div className="max-h-fit">
         <div className="w-full h-[26px] justify-between items-center flex mb-[14px] ">
           <div className="text-zinc-800 text-base xl:text-lg font-semibold  leading-relaxed">
@@ -127,16 +127,16 @@ const LastOrder = () => {
             See All
           </div>
         </div>
-        <div className="w-full h-6  mb-5 justify-between items-start flex gap-[auto] font-PlusJakartaSans text-gray-400 xl:text-base text-sm font-medium  leading-normal text-left ">
+        <div className="w-full h-6  mb-5 justify-between items-start flex gap-[auto] font-PlusJakartaSans text-gray-400 xl:text-base md:text-sm text-[10px] font-medium  leading-normal text-left ">
           <div className="w-[216px] ">Name</div>
-          <div className="w-[116px] ">Date</div>
+          <div className="w-[116px] md:block hidden ">Date</div>
           <div className="w-[120px] ">Amount</div>
           <div className="w-[95px] ">Status</div>
-          <div className="w-20 ">Invoice</div>
+          <div className="w-20 md:block hidden">Invoice</div>
         </div>
       </div>
 
-      <div className="flex gap-4 flex-col h-[calc(100%-84px)]  scrollBarWidthZero overflow-y-scroll">
+      <div className="flex jus gap-4 flex-col h-[calc(100%-84px)]  scrollBarWidthZero overflow-y-scroll">
         {data.map((item) => (
           <Order
             name={item.name}
