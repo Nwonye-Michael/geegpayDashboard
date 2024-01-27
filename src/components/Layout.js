@@ -3,7 +3,7 @@ import Header from "./Header"
 
 const Layout = ({ children }) => {
   return (
-    <div className="w-full h-full flex ">
+    <div className="w-full h-full flex overflow-hidden ">
       <Header />
       <div className="w-[calc(100vw-80px)]">{children}</div>
     </div>

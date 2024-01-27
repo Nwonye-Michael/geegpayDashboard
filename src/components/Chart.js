@@ -23,21 +23,25 @@ const monthsShort = [
 
 const Chart = () => {
   return (
-    <div className="h-full pt-4 px-5 [14px] border border-slate-100 rounded-[14px] font-PlusJakartaSans">
+    <div className="h-full pt-4 xl:px-5 px-3 [14px] border border-slate-100 rounded-[14px] font-PlusJakartaSans bg-white">
       <div className="w-full h-[37px] justify-between items-center inline-flex font-PlusJakartaSans  mb-4">
-        <div className="text-zinc-800 text-lg font-semibold  leading-relaxed">
+        <div className="text-zinc-800 text-base xl:text-lg font-semibold  leading-relaxed">
           Sales Trends
         </div>
-        <div className="w-[170px] justify-start items-center gap-2.5 flex">
-          <div className="text-gray-700 text-sm font-medium flex whitespace-nowrap text">
-            {"Short by :"}
+        <div className="xl:w-[170px] w-fit justify-start items-center gap-2.5 flex">
+          <div className="text-gray-700 xl:text-sm  text-[9px] font-medium flex whitespace-nowrap text">
+            Short by :
           </div>
           <div className="px-3 py-1.5 bg-white rounded-[20px] border border-neutral-200 flex-col justify-start items-center gap-2.5 inline-flex">
-            <div className="justify-center items-center gap-2.5 inline-flex">
+            <div className="justify-center items-center xl:gap-2.5 gap-1.5 inline-flex">
               <div className="text-gray-700 text-xs font-normal  leading-none">
                 Weekly
               </div>
-              <ArrowDown2 size="24" color="black" />
+              <ArrowDown2
+                size="24"
+                color="black"
+                className="scale-75 xl:scale-100"
+              />
               {/* <div className="w-5 h-5 relative bg-black bg-opacity-0"></div> */}
             </div>
           </div>
@@ -46,7 +50,7 @@ const Chart = () => {
 
       <section className="  w-full h-[calc(100%-53px)]">
         <div className="w-full h-[calc(100%-12px-16px-18px)] flex">
-          <div className="w-[90px] h-full flex justify-center">
+          <div className="xl:w-[90px] w-[70px] h-full flex justify-center">
             {" "}
             <div className="w-fit h-full grid grid-cols-1 gap-[auto] ">
               {[
@@ -58,13 +62,13 @@ const Chart = () => {
                 "5,000",
                 "0",
               ].map((price) => (
-                <div className="text-neutral-600 text-xs font-semibold font-// PlusJakartaSans leading-none flex  items-center text-left">
+                <div className="text-neutral-600 xl:text-xs text-[9px] font-semibold font-// PlusJakartaSans leading-none flex  items-center text-left">
                   {price}
                 </div>
               ))}
             </div>
           </div>
-          <div className="w-[calc(100%-90px)] h-full grid grid-cols-12 gap-[30px]   ">
+          <div className="xl:w-[calc(100%-90px)] w-[calc(100%-70px)] h-full grid grid-cols-12 gap-[30px]   ">
             {Data.map((item) => {
               let size
               if (item > 5000) {
@@ -84,16 +88,7 @@ const Chart = () => {
                     >
                       <div className="relative opacity-0 group-hover:opacity-100">
                         <div className="absolute left-1/2 transform -translate-x-1/2 bottom-0 h-fit ">
-                          {" "}
-                          {/* <img
-                          src={priceTag}
-                          alt=""
-                          className="w-20 h-8 absolute left-1/2 transform -translate-x-1/2 bottom-0  z-0"
-                        /> */}
                           <PriceTag className="" item={item} />
-                          {/* <span className="absolute left-1/2 transform -translate-x-1/2 bottom-0 w-fit text-whit z-1">
-                          {item}
-                        </span> */}
                         </div>
                       </div>
                     </div>
@@ -124,9 +119,9 @@ const Chart = () => {
             })}
           </div>
         </div>
-        <div className="h-[22px] w-[calc(100%-90px)] grid grid-cols-12 opacity-60 justify-start items-start  ml-[90px] mt-3 gap-[30px] ">
+        <div className="h-[22px]xl:w-[calc(100%-90px)] w-[calc(100%-70px)] grid grid-cols-12 opacity-60 justify-start items-start  xl:ml-[90px] ml-[70px] mt-3 gap-[30px] ">
           {monthsShort.map((month) => (
-            <div className=" text-center text-neutral-600 text-sm font-semibold font-PlusJakartaSans leading-snug w-[30px] ">
+            <div className=" text-center text-neutral-600 xl:text-sm text-[8px] font-semibold font-PlusJakartaSans leading-snug xl:w-[30px] w-5 ">
               {month}
             </div>
           ))}

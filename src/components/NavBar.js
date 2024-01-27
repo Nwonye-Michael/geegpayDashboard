@@ -15,20 +15,20 @@ const NavBar = () => {
           className="w-[349px] h-12 rounded-[20px] justify-start  pl-4 bg-white  border border-zinc-300  items-center gap-2 flex"
           placeholder=" Search..."
         />
-        <div className="text-zinc-800 text-sm font-medium font-Inter leading-snug flex items-center justify-center gap-[10px]">
+        <div className="text-zinc-800 text-sm font-medium font-Inter leading-snug hidden xl:flex items-center justify-center gap-[10px]">
           <Calendar color="#000000" />
           November 15, 2023
         </div>
         <div
-          className="rounded-[50%] border-2 border-gray-300 p-[11px]
+          className="rounded-[50%] xl:border-2  border-gray-300 p-[11px]
     "
         >
-          <BellIcon />
+          <BellIcon className={"scale-75 xl:scale-100"} />
         </div>
-        <div className="w-[215px] h-[52px] px-2 py-1.5 rounded-[28px] border border-zinc-300 justify-center items-center gap-3 flex">
+        <div className="xl:w-[215px] w-fit h-[52px] px-2 py-1.5 rounded-[28px] xl:border border-zinc-300 justify-center items-center gap-3 flex">
           <div className="flex gap-x-2">
             <img src={avatar} alt="" className="" />
-            <div className="flex flex-col  text-right text-zinc-800 text-base font-normal font-Inter">
+            <div className="hidden xl:flex flex-col  text-right text-zinc-800 text-base font-normal font-Inter">
               <div className="text-right text-zinc-800 text-base font-normal font-Inter">
                 Justin Bergson
               </div>
@@ -37,7 +37,7 @@ const NavBar = () => {
               </div>
             </div>
           </div>
-          <ArrowDown2 size="24" color="#0D062D" />
+          <ArrowDown2 size="24" color="#0D062D" className="hidden xl:block" />
         </div>
       </div>
     </div>

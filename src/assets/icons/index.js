@@ -48,6 +48,7 @@ export const BellIcon = ({ fill, className }) => (
     height={20}
     fill="none"
     focusable="true"
+    className={className}
   >
     <path
       fill="#0D062D"
